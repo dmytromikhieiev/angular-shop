@@ -1,0 +1,6 @@
+<div *ngIf="products.length;else empty_cart">
+  <ul *ngFor="let product of products">
+     <li>{{product.getName()}} <button (click)="removeFromCart(product)">Remove</button></li>
+  </ul>
+</div>
+<ng-template #empty_cart>Cart is empty</ng-template>
